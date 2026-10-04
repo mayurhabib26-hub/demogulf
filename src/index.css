@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-ivory: #FFFFF0;
+    --bg-card: #FFFFFF;
+    --bg-beige: #F3F0E5;
+    --color-text-primary: #111111;
+    --color-text-secondary: #66645A;
+    --color-olive: #777348;
+    --color-border: #E1DECE;
+  }
+
+  * {
+    border-color: #E1DECE;
+  }
+
+  body {
+    background-color: #FFFFF0;
+    color: #111111;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F0E5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4C0AC;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777348;
+}
+
+/* Glassmorphism & border utilities */
+.glass-panel {
+  background: rgba(255, 255, 240, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(225, 222, 206, 0.8);
+}
+
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid #E1DECE;
+  box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: #C2BDA7;
+  box-shadow: 0 12px 30px -4px rgba(17, 17, 17, 0.08);
+}
